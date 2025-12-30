@@ -21,8 +21,48 @@
         "secondary_button_label": "Explore Collection"
       }
     },
+    "featured_collections_KTRE7b": {
+      "type": "featured-collections",
+      "blocks": {
+        "featured_collection_card_WX3tNF": {
+          "type": "featured-collection-card",
+          "name": "t:blocks.featured_collection_card.name",
+          "settings": {
+            "collection": "mens",
+            "subtext": ""
+          },
+          "blocks": {}
+        },
+        "featured_collection_card_EtkQ8U": {
+          "type": "featured-collection-card",
+          "name": "t:blocks.featured_collection_card.name",
+          "settings": {
+            "collection": "womens",
+            "subtext": ""
+          },
+          "blocks": {}
+        },
+        "featured_collection_card_aGpByJ": {
+          "type": "featured-collection-card",
+          "name": "t:blocks.featured_collection_card.name",
+          "settings": {
+            "collection": "accessories",
+            "subtext": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "featured_collection_card_WX3tNF",
+        "featured_collection_card_EtkQ8U",
+        "featured_collection_card_aGpByJ"
+      ],
+      "name": "t:general.featured_collections",
+      "settings": {}
+    }
   },
   "order": [
     "hero_aygYxe",
+    "featured_collections_KTRE7b"
   ]
 }
