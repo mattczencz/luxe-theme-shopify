@@ -4,7 +4,7 @@
   "description": "<h1 align=\"center\" style=\"position: relative;\">\r   <br>\r     <img src=\"./assets/shoppy-x-ray.svg\" alt=\"logo\" width=\"200\">\r   <br>\r   Shopify Skeleton Theme\r </h1>",
   "main": "index.js",
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./assets/output.css --content './**/*.{js,json,liquid}' --watch"
+    "dev": "shopify theme dev & npx @tailwindcss/cli -i ./src/input.css -o ./assets/output.css --content './**/*.{js,json,liquid}' --watch"
   },
   "keywords": [],
   "author": "",
