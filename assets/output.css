@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-gray-900: oklch(21% 0.034 264.665);
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
@@ -20,6 +19,16 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-primary--family: var(--font-primary--family);
+    --font-primary--style: var(--font-primary--style);
+    --font-primary--weight: var(--font-primary--weight);
+    --page-width: var(--page-width);
+    --page-margin: var(--page-margin);
+    --color-background: var(--color-background);
+    --color-foreground: var(--color-foreground);
+    --color-accent: var(--color-accent);
+    --color-accent-contrast: var(--color-accent-contrast);
+    --style-border-radius-inputs: var(--style-border-radius-inputs);
   }
 }
 @layer base {
@@ -189,9 +198,6 @@
   .left-full {
     left: 100%;
   }
-  .ml-auto {
-    margin-left: auto;
-  }
   .block {
     display: block;
   }
@@ -211,9 +217,6 @@
     width: calc(var(--spacing) * 6);
     height: calc(var(--spacing) * 6);
   }
-  .h-20 {
-    height: calc(var(--spacing) * 20);
-  }
   .h-25 {
     height: calc(var(--spacing) * 25);
   }
@@ -232,17 +235,8 @@
   .items-center {
     align-items: center;
   }
-  .justify-between {
-    justify-content: space-between;
-  }
-  .justify-center {
-    justify-content: center;
-  }
   .justify-start {
     justify-content: flex-start;
-  }
-  .gap-1 {
-    gap: calc(var(--spacing) * 1);
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
@@ -298,10 +292,10 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
-  .hover\:text-blue-500 {
+  .hover\:text-accent {
     &:hover {
       @media (hover: hover) {
-        color: var(--color-blue-500);
+        color: var(--color-accent);
       }
     }
   }

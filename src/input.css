@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+@theme {
+  --font-primary--family: var(--font-primary--family);
+  --font-primary--style: var(--font-primary--style);
+  --font-primary--weight: var(--font-primary--weight);
+  --page-width: var(--page-width);
+  --page-margin: var(--page-margin);
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --color-accent: var(--color-accent);
+  --color-accent-contrast: var(--color-accent-contrast);
+  --style-border-radius-inputs: var(--style-border-radius-inputs);
+}

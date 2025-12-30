@@ -5,7 +5,7 @@
 
   <div class="flex gap-4 flex-1">
     {% for link in section.settings.menu.links %}
-      {{ link.title | link_to: link.url, class: 'text-sm font-medium text-gray-900 hover:text-blue-500 transition' }}
+      {{ link.title | link_to: link.url, class: 'text-sm font-medium text-gray-900 hover:text-accent transition' }}
     {% endfor %}
   </div>
 
