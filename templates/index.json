@@ -21,14 +21,8 @@
         "secondary_button_label": "Explore Collection"
       }
     },
-    "main": {
-      "type": "hello-world",
-      "disabled": true,
-      "settings": {}
-    }
   },
   "order": [
     "hero_aygYxe",
-    "main"
   ]
 }
