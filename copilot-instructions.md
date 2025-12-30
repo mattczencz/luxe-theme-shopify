@@ -1,0 +1,1 @@
+/Users/mattczencz/Shopify/Luxe/AGENTS.md
