@@ -3,7 +3,8 @@
     {% if section.settings.background_image != blank %}
       {% render 'image',
         image: section.settings.background_image,
-        class: 'w-full h-full object-cover opacity-90 hidden md:block',
+        class: 'w-full h-full object-cover opacity-60 md:opacity-90',
+        img_class: 'object-cover h-full md:h-auto',
         preload: true
       %}
     {% endif %}
@@ -17,7 +18,7 @@
         {{ section.settings.eyebrow | upcase }}
       </p>
       <h1 class="text-6xl font-bold text-white mb-6 leading-tight">{{ section.settings.headline }}</h1>
-      <p class="text-gray-300 text-lg mb-8">
+      <p class="text-gray-200 text-lg mb-8">
         {{ section.settings.text }}
       </p>
       <div class="flex gap-4 flex-col md:flex-row">
