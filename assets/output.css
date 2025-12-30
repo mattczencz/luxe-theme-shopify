@@ -249,12 +249,6 @@
   .inline {
     display: inline;
   }
-  .aspect-square {
-    aspect-ratio: 1 / 1;
-  }
-  .aspect-video {
-    aspect-ratio: var(--aspect-video);
-  }
   .size-6 {
     width: calc(var(--spacing) * 6);
     height: calc(var(--spacing) * 6);
@@ -265,17 +259,11 @@
   .h-150 {
     height: calc(var(--spacing) * 150);
   }
-  .h-fit {
-    height: fit-content;
-  }
   .h-full {
     height: 100%;
   }
   .max-h-150 {
     max-height: calc(var(--spacing) * 150);
-  }
-  .min-h-fit {
-    min-height: fit-content;
   }
   .w-full {
     width: 100%;
@@ -285,9 +273,6 @@
   }
   .max-w-\(--page-margin\) {
     max-width: var(--page-margin);
-  }
-  .max-w-full {
-    max-width: 100%;
   }
   .max-w-xl {
     max-width: var(--container-xl);
@@ -309,9 +294,6 @@
   }
   .justify-between {
     justify-content: space-between;
-  }
-  .justify-start {
-    justify-content: flex-start;
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
@@ -371,10 +353,6 @@
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
   .text-6xl {
     font-size: var(--text-6xl);
     line-height: var(--tw-leading, var(--text-6xl--line-height));
@@ -420,9 +398,6 @@
   .text-gray-200 {
     color: var(--color-gray-200);
   }
-  .text-gray-300 {
-    color: var(--color-gray-300);
-  }
   .text-gray-900 {
     color: var(--color-gray-900);
   }
@@ -438,14 +413,8 @@
   .italic {
     font-style: italic;
   }
-  .opacity-50 {
-    opacity: 50%;
-  }
   .opacity-60 {
     opacity: 60%;
-  }
-  .opacity-90 {
-    opacity: 90%;
   }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
@@ -494,24 +463,9 @@
       }
     }
   }
-  .sm\:aspect-video {
-    @media (width >= 40rem) {
-      aspect-ratio: var(--aspect-video);
-    }
-  }
-  .md\:block {
-    @media (width >= 48rem) {
-      display: block;
-    }
-  }
   .md\:flex {
     @media (width >= 48rem) {
       display: flex;
-    }
-  }
-  .md\:hidden {
-    @media (width >= 48rem) {
-      display: none;
     }
   }
   .md\:aspect-video {
