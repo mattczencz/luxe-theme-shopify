@@ -48,5 +48,11 @@
     "submit": "Search",
     "no_results_html": "No results found for {{ terms }}",
     "results_for_html": "{{ count }} results found for {{ terms }}"
+  },
+  "blocks": {
+    "featured_collection_card": {
+      "name": "Featured collection card",
+      "default_subtext": "Explore collection"
+    }
   }
 }
