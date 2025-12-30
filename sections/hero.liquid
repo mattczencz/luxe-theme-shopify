@@ -1,10 +1,10 @@
-<div class="full-width relative bg-gray-900 overflow-hidden h-150 md:h-auto md:aspect-video max-h-150 w-full">
+<div class="full-width relative bg-gray-900 overflow-hidden min-h-fit py-6 h-150 md:h-150 w-full">
   <div class="absolute inset-0">
     {% if section.settings.background_image != blank %}
       {% render 'image',
         image: section.settings.background_image,
         class: 'w-full h-full object-cover opacity-60 md:opacity-90',
-        img_class: 'object-cover h-full md:h-auto',
+        img_class: 'object-cover h-full lg:h-auto',
         preload: true
       %}
     {% endif %}
@@ -12,7 +12,7 @@
 
   <div class="absolute inset-0 bg-linear-to-r from-black/70 to-transparent"></div>
 
-  <div class="relative max-w-(--content-width) mx-auto h-full flex items-center">
+  <div class="relative max-w-(--content-width) mx-auto h-full min-h-fit flex items-center">
     <div class="max-w-xl">
       <p class="text-accent text-sm font-semibold tracking-widest uppercase mb-4">
         {{ section.settings.eyebrow | upcase }}
@@ -22,7 +22,7 @@
         {{ section.settings.text }}
       </p>
       <div class="flex gap-4 flex-col md:flex-row">
-        <button class="bg-white text-brand px-8 py-4 font-semibold hover:bg-accent hover:text-white transition duration-300">
+        <button class="px-8 bg-white text-brand  py-4 font-semibold hover:bg-accent hover:text-white transition duration-300">
           {{ section.settings.primary_button_label }}
         </button>
         <button class="border-2 border-white text-white px-8 py-4 font-semibold hover:bg-white hover:text-foreground transition duration-300">

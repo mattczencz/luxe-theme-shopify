@@ -1,0 +1,65 @@
+{% doc %}
+  Renders a featured collection card for use in sections that support theme blocks.
+
+  @example
+  {% content_for 'block', type: 'featured-collection-card', id: 'featured-collection-card-1' %}
+{% enddoc %}
+
+<a href="{{ block.settings.collection.url }}" class="relative group cursor-pointer overflow-hidden rounded-lg h-100">
+  {% if block.settings.collection and block.settings.collection.image != blank %}
+    {{
+      block.settings.collection.image
+      | image_url: width: 1200
+      | image_tag: class: 'w-full h-full object-cover group-hover:scale-110 transition duration-500'
+    }}
+  {% endif %}
+
+  <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition duration-300"></div>
+
+  <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
+    {% if block.settings.collection %}
+      <h3 class="text-3xl font-bold mb-2">
+        {% if block.settings.collection.title != blank %}
+          {{ block.settings.collection.title | escape }}
+        {% else %}
+          {{ 'blocks.featured_collection_card.name' | t }}
+        {% endif %}
+      </h3>
+    {% endif %}
+
+    <p class="text-sm mb-4">
+      {% if block.settings.subtext != blank %}
+        {{ block.settings.subtext | escape }}
+      {% else %}
+        {{ 'blocks.featured_collection_card.default_subtext' | t }}
+      {% endif %}
+    </p>
+
+    <i class="text-xl group-hover:translate-x-2 transition">
+      {{ 'icon-arrow-right.svg' | inline_asset_content }}
+    </i>
+  </div>
+</a>
+
+{% schema %}
+{
+  "name": "t:blocks.featured_collection_card.name",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "t:general.collection"
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "t:labels.text_options.subtext"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.featured_collection_card.name"
+    }
+  ]
+}
+{% endschema %}

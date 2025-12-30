@@ -22,6 +22,7 @@
     "column": "Column",
     "content": "Content",
     "custom_section": "Custom section",
+    "featured_collections": "Featured Collections",
     "fonts": "Fonts",
     "footer": "Footer",
     "group": "Group",
@@ -68,6 +69,18 @@
     },
     "image": {
       "background": "Background",
+    },
+    "text_options": {
+      "title": "Title",
+      "subtitle": "Subtitle",
+      "subtext": "Subtext",
+      "description": "Description"
+    }
+  },
+  "blocks": {
+    "featured_collection_card": {
+      "name": "Featured collection card",
+      "default_subtext": "Explore collection"
     }
   },
   "options": {

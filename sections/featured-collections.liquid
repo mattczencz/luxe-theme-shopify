@@ -1,0 +1,16 @@
+<div class="mx-auto py-6">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    {% content_for 'blocks' %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:general.featured_collections",
+  "tag": "section",
+  "class": "md:py-20 bg-background",
+  "blocks": [{ "type": "featured-collection-card" }],
+  "max_blocks": 3,
+  "presets": [{ "name": "t:general.featured_collections" }]
+}
+{% endschema %}
