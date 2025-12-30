@@ -9,12 +9,26 @@
  */
 {
   "sections": {
+    "hero_aygYxe": {
+      "type": "hero",
+      "name": "t:general.hero",
+      "settings": {
+        "background_image": "shopify://shop_images/model-in-neutral-colors-by-window.jpg",
+        "eyebrow": "SPRING COLLECTION 2024",
+        "headline": "Redefine Your Style",
+        "text": "Discover our curated collection of contemporary fashion pieces designed for the modern individual.",
+        "primary_button_label": "Shop Now",
+        "secondary_button_label": "Explore Collection"
+      }
+    },
     "main": {
       "type": "hello-world",
+      "disabled": true,
       "settings": {}
     }
   },
   "order": [
+    "hero_aygYxe",
     "main"
   ]
 }
