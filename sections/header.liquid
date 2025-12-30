@@ -1,6 +1,6 @@
 <header>
-  <h2 class="header__title">
-    {{ shop.name | link_to: routes.root_url }}
+  <h2 class="text-3xl font-bold text-brand">
+    {{ shop.name | link_to: routes.root_url | upcase }}
   </h2>
 
   <div class="header__menu">
@@ -10,10 +10,10 @@
   </div>
 
   <div class="header__icons items-center">
+    {{ 'icon-search.svg' | inline_asset_content | link_to: routes.search_url, class: 'size-6' }}
+
     {% if shop.customer_accounts_enabled %}
-      <div class="size-6">
-        {{ 'icon-account.svg' | inline_asset_content | link_to: routes.account_url }}
-      </div>
+      {{ 'icon-account.svg' | inline_asset_content | link_to: routes.account_url, class: 'size-6' }}
     {% endif %}
 
     <a href="{{ routes.cart_url }}">
@@ -38,7 +38,6 @@
   header a {
     position: relative;
     text-decoration: none;
-    color: var(--color-foreground);
   }
   header a sup {
     position: absolute;
