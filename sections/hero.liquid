@@ -1,0 +1,75 @@
+<div class="full-width relative bg-gray-900 overflow-hidden h-150">
+  <div class="absolute inset-0">
+    {% if section.settings.background_image != blank %}
+      {% render 'image', image: section.settings.background_image, class: 'w-full h-full object-cover opacity-90' %}
+    {% endif %}
+  </div>
+
+  <div class="absolute inset-0 bg-linear-to-r from-black/70 to-transparent"></div>
+
+  <div class="relative max-w-(--content-width) mx-auto h-full flex items-center">
+    <div class="max-w-xl">
+      <p class="text-accent text-sm font-semibold tracking-widest uppercase mb-4">
+        {{ section.settings.eyebrow | upcase }}
+      </p>
+      <h1 class="text-6xl font-bold text-white mb-6 leading-tight">{{ section.settings.headline }}</h1>
+      <p class="text-gray-300 text-lg mb-8">
+        {{ section.settings.text }}
+      </p>
+      <div class="flex space-x-4">
+        <button class="bg-white text-brand px-8 py-4 font-semibold hover:bg-accent hover:text-white transition duration-300">
+          {{ section.settings.primary_button_label }}
+        </button>
+        <button class="border-2 border-white text-white px-8 py-4 font-semibold hover:bg-white hover:text-brand transition duration-300">
+          {{ section.settings.secondary_button_label }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:general.hero",
+  "limit": 1,
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "t:labels.image.background"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "t:labels.eyebrow"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "t:labels.headline"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "t:labels.text"
+    },
+    {
+      "type": "text",
+      "id": "primary_button_label",
+      "label": "t:labels.button_label.primary"
+    },
+    {
+      "type": "text",
+      "id": "secondary_button_label",
+      "label": "t:labels.button_label.secondary"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:general.hero",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}
