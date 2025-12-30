@@ -17,6 +17,7 @@
     "footer": "Footer",
     "group": "Group",
     "header": "Header",
+    "hero": "Hero",
     "layout": "Layout",
     "main": "Main",
     "page": "Page",
@@ -49,7 +50,16 @@
     "page_width": "Page width",
     "show_payment_icons": "Show payment icons",
     "text_style": "Text style",
-    "text": "Text"
+    "text": "Text",
+    "eyebrow": "Eyebrow",
+    "headline": "Headline",
+    "button_label": {
+      "primary": "Primary Button Label",
+      "secondary": "Secondary Button Label"
+    },
+    "image": {
+      "background": "Background",
+    }
   },
   "options": {
     "alignment": {
