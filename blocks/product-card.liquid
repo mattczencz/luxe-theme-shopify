@@ -44,9 +44,7 @@
           </i>
         </a>
       </div>
-      <button class="absolute bottom-4 left-4 right-4 bg-foreground text-white py-3 font-semibold rounded-lg opacity-100 lg:opacity-0 group-hover:opacity-100 transition duration-300 hover:bg-accent">
-        Add to Cart
-      </button>
+      {% render 'product-card-add-to-cart', product: block_product, use_quick_buy: block.settings.allow_quick_buy %}
     </div>
     <div>
       <h3 class="font-semibold text-foreground mb-1">{{ block_product.title }}</h3>
@@ -88,6 +86,13 @@
       "id": "show_ratings",
       "label": "Show Ratings?",
       "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "allow_quick_buy",
+      "label": "Allow Quick Buy?",
+      "default": false,
+      "info": "Choose this option if you want the button to initiate a purchase right away instead of adding it to the cart."
     }
   ],
   "presets": [{ "name": "t:blocks.product_card.name" }]

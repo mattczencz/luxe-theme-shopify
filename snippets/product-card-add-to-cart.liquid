@@ -1,0 +1,37 @@
+{% doc %}
+  Renders the add to cart button and form for a specific product.
+
+  @param {product} [product] - The product object
+  @param {boolean} [use_quick_buy] - Dictates where the form uses the standard add to cart action or renders the quick purchase button
+
+  @example
+  {% render 'product-add-to-cart', product: product %}
+  {% render 'product-add-to-cart', product: product, use_quick_buy: true%}
+{% enddoc %}
+
+{% form 'product', product %}
+  {% assign current_variant = product.first_available_variant %}
+
+  <select name="id">
+    {% for variant in product.variants %}
+      <option
+        value="{{ variant.id }}"
+        {% if variant == current_variant %}
+          selected="selected"
+        {% endif %}
+      >
+        {{ variant.title }} - {{ variant.price | money }}
+      </option>
+    {% endfor %}
+  </select>
+
+  <input type="text" name="quantity" min="1" value="1">
+
+  {% if use_quick_buy %}
+    {{ form | payment_button }}
+  {% else %}
+    <button class="absolute bottom-4 left-4 right-4 bg-foreground text-white py-3 font-semibold rounded-lg opacity-100 lg:opacity-0 group-hover:opacity-100 transition duration-300 hover:bg-accent">
+      {{ 'cart.add' | t }}
+    </button>
+  {% endif %}
+{% endform %}
