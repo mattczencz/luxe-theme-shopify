@@ -63,5 +63,13 @@
       "name": "Featured collection card",
       "default_subtext": "Explore collection"
     }
+  },
+  "cta": {
+    "label": "Shop Now"
+  },
+  "general_content": {
+    "title": "Title",
+    "subtitle": "Subtitle",
+    "subtext": "Subtext goes here"
   }
 }
