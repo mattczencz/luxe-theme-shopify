@@ -59,10 +59,22 @@
       ],
       "name": "t:general.featured_collections",
       "settings": {}
+    },
+    "media_and_copy_fRNDfM": {
+      "type": "media-and-copy",
+      "name": "t:general.media_and_copy",
+      "settings": {
+        "title": "Black Friday Sale",
+        "text": "Black Friday Starts Now! Up to 70% off everything. Our biggest deals of the year won't last long – shop before they're gone!",
+        "image": "shopify://shop_images/ecommerce-black-friday.jpg",
+        "cta_label": "Shop now",
+        "cta_link": "shopify://collections/all"
+      }
     }
   },
   "order": [
     "hero_aygYxe",
-    "featured_collections_KTRE7b"
+    "featured_collections_KTRE7b",
+    "media_and_copy_fRNDfM"
   ]
 }
