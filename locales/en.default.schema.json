@@ -30,6 +30,7 @@
     "hero": "Hero",
     "layout": "Layout",
     "main": "Main",
+    "media_and_copy": "Media and Copy",
     "page": "Page",
     "password": "Password",
     "primary": "Primary",
@@ -68,6 +69,7 @@
       "secondary": "Secondary Button Label"
     },
     "image": {
+      "default": "Image",
       "background": "Background",
     },
     "text_options": {
@@ -75,6 +77,10 @@
       "subtitle": "Subtitle",
       "subtext": "Subtext",
       "description": "Description"
+    },
+    "cta": {
+      "link": "CTA Link",
+      "label": "CTA Label"
     }
   },
   "blocks": {
