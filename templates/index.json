@@ -237,6 +237,15 @@
       ],
       "name": "t:general.info_blocks",
       "settings": {}
+    },
+    "contact_form_N8jWY8": {
+      "type": "contact-form",
+      "name": "t:general.contact_form",
+      "settings": {
+        "headline": "Stay Updated",
+        "subtext": "Subscribe to our newsletter for exclusive offers and style tips",
+        "button_label": "Subscribe"
+      }
     }
   },
   "order": [
@@ -245,6 +254,7 @@
     "featured_products_jBWhp9",
     "media_and_copy_fRNDfM",
     "trending_ffFxgi",
-    "info_blocks_tfYQDC"
+    "info_blocks_tfYQDC",
+    "contact_form_N8jWY8"
   ]
 }
