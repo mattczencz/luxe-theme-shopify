@@ -1,0 +1,14 @@
+<div class="mx-aut w-full">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+    {% content_for 'blocks' %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:general.info_blocks",
+  "class": "content-section bg-gray-50",
+  "blocks": [{ "type": "@theme" }],
+  "presets": [{ "name": "t:general.info_blocks" }]
+}
+{% endschema %}

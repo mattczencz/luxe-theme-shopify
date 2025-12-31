@@ -29,6 +29,7 @@
     "group": "Group",
     "header": "Header",
     "hero": "Hero",
+    "info_blocks": "Info Blocks",
     "layout": "Layout",
     "main": "Main",
     "media_and_copy": "Media and Copy",
@@ -55,6 +56,7 @@
     "accent_contrast": "Accent Contrast",
     "grid_gap": "Grid spacing",
     "grid_item_width": "Grid item width",
+    "icon": "Icon",
     "input_corner_radius": "Input corner radius",
     "layout_direction": "Layout direction",
     "menu": "Menu",
@@ -92,7 +94,10 @@
     },
     "product_card": {
       "name": "Product Card",
-    }
+    },
+    "info_block": {
+      "name": "Info Block"
+    },
   },
   "options": {
     "alignment": {
