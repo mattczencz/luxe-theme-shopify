@@ -1,0 +1,56 @@
+{% assign icon_file = block.settings.icon | default: 'icon-truck.svg' %}
+
+<div class="text-center">
+  <div class="bg-accent text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+    <i class="text-2xl">
+      {{ icon_file | inline_asset_content }}
+    </i>
+  </div>
+  <h3 class="font-bold text-brand mb-2">
+    {% if block.settings.title %}
+      {{ block.settings.title }}
+    {% else %}
+      {{ 'general_content.title' | t }}
+    {% endif %}
+  </h3>
+  <p class="text-sm text-gray-600">
+    {% if block.settings.subtext %}
+      {{ block.settings.subtext }}
+    {% else %}
+      {{ 'general_content.subtext' | t }}
+    {% endif %}
+  </p>
+</div>
+
+{% schema %}
+{
+  "name": "t:blocks.info_block.name",
+  "settings": [
+    {
+      "type": "select",
+      "id": "icon",
+      "label": "t:labels.icon",
+      "options": [
+        { "label": "Headphones", "value": "icon-headphones.svg" },
+        { "label": "Return", "value": "icon-return.svg" },
+        { "label": "Shield", "value": "icon-shield.svg" },
+        { "label": "Truck", "value": "icon-truck.svg" }
+      ],
+      "default": "icon-truck.svg"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:labels.text_options.title",
+      "default": "t:labels.text_options.title"
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "t:labels.text_options.subtext",
+      "default": "t:labels.text_options.subtext"
+    }
+  ],
+  "presets": [{ "name": "t:blocks.info_block.name" }]
+}
+{% endschema %}
