@@ -60,6 +60,60 @@
       "name": "t:general.featured_collections",
       "settings": {}
     },
+    "featured_products_jBWhp9": {
+      "type": "featured-products",
+      "blocks": {
+        "product_card_gyW89U": {
+          "type": "product-card",
+          "name": "t:blocks.product_card.name",
+          "settings": {
+            "product": "floral-midi-dress-womens",
+            "show_ratings": true
+          },
+          "blocks": {}
+        },
+        "product_card_gPj4bB": {
+          "type": "product-card",
+          "name": "t:blocks.product_card.name",
+          "settings": {
+            "product": "classic-denim-jacket-mens",
+            "show_ratings": false
+          },
+          "blocks": {}
+        },
+        "product_card_jimGBP": {
+          "type": "product-card",
+          "name": "t:blocks.product_card.name",
+          "settings": {
+            "product": "cozy-cable-knit-sweater-womens",
+            "show_ratings": false
+          },
+          "blocks": {}
+        },
+        "product_card_eaPCdd": {
+          "type": "product-card",
+          "name": "t:blocks.product_card.name",
+          "settings": {
+            "product": "high-waist-athletic-leggings-womens",
+            "show_ratings": false
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "product_card_gyW89U",
+        "product_card_gPj4bB",
+        "product_card_jimGBP",
+        "product_card_eaPCdd"
+      ],
+      "name": "t:general.featured_products",
+      "settings": {
+        "headline": "New Arrivals",
+        "subtext": "Fresh styles just landed",
+        "cta_label": "View All",
+        "cta_link": "shopify://collections/all"
+      }
+    },
     "media_and_copy_fRNDfM": {
       "type": "media-and-copy",
       "name": "t:general.media_and_copy",
@@ -75,6 +129,7 @@
   "order": [
     "hero_aygYxe",
     "featured_collections_KTRE7b",
+    "featured_products_jBWhp9",
     "media_and_copy_fRNDfM"
   ]
 }
