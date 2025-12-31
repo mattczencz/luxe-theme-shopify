@@ -1,0 +1,95 @@
+{% assign block_product = block.settings.product %}
+
+{% unless block_product == blank %}
+  {% assign product_date = block_product.published_at | date: '%s' %}
+  {% assign current_date = 'now' | date: '%s' %}
+  {% assign days_old = current_date | minus: product_date | date: '%d' | times: 1.0 %}
+
+  {% assign product_on_sale = false %}
+
+  {% if block_product.compare_at_price > block_product.price %}
+    {% assign product_on_sale = true %}
+  {% endif %}
+
+  <div class="group">
+    <div class="relative overflow-hidden rounded-lg mb-4 bg-white h-95">
+      {% if block_product.featured_image != blank %}
+        {% render 'image',
+          image: block_product.featured_image,
+          class: 'h-full w-full',
+          img_class: 'w-full h-full object-cover group-hover:scale-105 transition duration-500'
+        %}
+      {% endif %}
+
+      {% if product_on_sale %}
+        {% render 'product-status-pill', on_sale: true %}
+      {% elsif days_old < 10 %}
+        {% render 'product-status-pill', new: true %}
+      {% endif %}
+
+      <div class="absolute top-4 right-4 space-y-2 opacity-0 group-hover:opacity-100 transition duration-300">
+        <button class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-accent hover:text-white transition">
+          {% comment %} Heart Icon {% endcomment %}
+          <i>
+            {{ 'icon-heart.svg' | inline_asset_content }}
+          </i>
+        </button>
+        <a
+          href="{{ block_product.url }}"
+          class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-accent hover:text-white transition"
+        >
+          {% comment %} Eye Icon {% endcomment %}
+          <i>
+            {{ 'icon-eyeball.svg' | inline_asset_content }}
+          </i>
+        </a>
+      </div>
+      <button class="absolute bottom-4 left-4 right-4 bg-foreground text-white py-3 font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition duration-300 hover:bg-accent">
+        Add to Cart
+      </button>
+    </div>
+    <div>
+      <h3 class="font-semibold text-foreground mb-1">{{ block_product.title }}</h3>
+      <p class="text-sm text-gray-500 mb-2">{{ block_product.category }}</p>
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+          <span class="text-lg font-bold text-foreground">{{ block_product.price | money }}</span>
+          {% if product_on_sale %}
+            <span class="text-sm text-gray-400 line-through">{{ block_product.compare_at_price | money }}</span>
+          {% endif %}
+        </div>
+        {% if block.settings.show_ratings %}
+          <div class="flex items-center space-x-1">
+            {% comment %} Mock Ratings -- TODO: REMOVE WHEN REAL ONES ARE IMPLEMENTED {% endcomment %}
+            {% for i in (1..5) %}
+              <i class="text-accent text-xs size-3">
+                {{ 'icon-star.svg' | inline_asset_content }}
+              </i>
+            {% endfor %}
+            <span class="text-xs text-gray-500 ml-1">(128)</span>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endunless %}
+
+{% schema %}
+{
+  "name": "t:blocks.product_card.name",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "t:general.product"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_ratings",
+      "label": "Show Ratings?",
+      "default": false
+    }
+  ],
+  "presets": [{ "name": "t:blocks.product_card.name" }]
+}
+{% endschema %}

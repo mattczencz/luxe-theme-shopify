@@ -23,6 +23,7 @@
     "content": "Content",
     "custom_section": "Custom section",
     "featured_collections": "Featured Collections",
+    "featured_products": "Featured Products",
     "fonts": "Fonts",
     "footer": "Footer",
     "group": "Group",
@@ -87,6 +88,9 @@
     "featured_collection_card": {
       "name": "Featured collection card",
       "default_subtext": "Explore collection"
+    },
+    "product_card": {
+      "name": "Product Card",
     }
   },
   "options": {
