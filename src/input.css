@@ -141,4 +141,8 @@
     width: 100%;
     height: auto;
   }
+
+  .content-section {
+    @apply py-12 md:py-20;
+  }
 }

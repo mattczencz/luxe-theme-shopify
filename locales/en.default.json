@@ -70,6 +70,7 @@
   },
   "general_content": {
     "title": "Title",
+    "headline": "Headline goes here",
     "subtitle": "Subtitle",
     "subtext": "Subtext goes here"
   }
