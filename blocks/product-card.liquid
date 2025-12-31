@@ -27,7 +27,7 @@
         {% render 'product-status-pill', new: true %}
       {% endif %}
 
-      <div class="absolute top-4 right-4 space-y-2 opacity-0 group-hover:opacity-100 transition duration-300">
+      <div class="absolute top-4 right-4 space-y-2 opacity-100 lg:opacity-0 group-hover:opacity-100 transition duration-300">
         <button class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-accent hover:text-white transition">
           {% comment %} Heart Icon {% endcomment %}
           <i>
@@ -44,7 +44,7 @@
           </i>
         </a>
       </div>
-      <button class="absolute bottom-4 left-4 right-4 bg-foreground text-white py-3 font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition duration-300 hover:bg-accent">
+      <button class="absolute bottom-4 left-4 right-4 bg-foreground text-white py-3 font-semibold rounded-lg opacity-100 lg:opacity-0 group-hover:opacity-100 transition duration-300 hover:bg-accent">
         Add to Cart
       </button>
     </div>
