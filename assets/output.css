@@ -8,6 +8,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-gray-50: oklch(98.5% 0.002 247.839);
+    --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
@@ -17,6 +18,7 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-xl: 36rem;
+    --container-7xl: 80rem;
     --text-xs: 0.75rem;
     --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
@@ -243,9 +245,6 @@
   .left-4 {
     left: calc(var(--spacing) * 4);
   }
-  .left-full {
-    left: 100%;
-  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -342,8 +341,8 @@
   .max-w-\(--content-width\) {
     max-width: var(--content-width);
   }
-  .max-w-\(--page-margin\) {
-    max-width: var(--page-margin);
+  .max-w-7xl {
+    max-width: var(--container-7xl);
   }
   .max-w-xl {
     max-width: var(--container-xl);
@@ -484,6 +483,9 @@
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
+  .px-6 {
+    padding-inline: calc(var(--spacing) * 6);
+  }
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
   }
@@ -501,6 +503,9 @@
   }
   .py-12 {
     padding-block: calc(var(--spacing) * 12);
+  }
+  .py-20 {
+    padding-block: calc(var(--spacing) * 20);
   }
   .text-center {
     text-align: center;
@@ -859,6 +864,12 @@
   .image > img {
     width: 100%;
     height: auto;
+  }
+  .content-section {
+    padding-block: calc(var(--spacing) * 12);
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 20);
+    }
   }
 }
 @property --tw-rotate-x {
