@@ -28,7 +28,7 @@
           "type": "featured-collection-card",
           "name": "t:blocks.featured_collection_card.name",
           "settings": {
-            "collection": "mens",
+            "collection": "mens-1",
             "subtext": ""
           },
           "blocks": {}
@@ -37,7 +37,7 @@
           "type": "featured-collection-card",
           "name": "t:blocks.featured_collection_card.name",
           "settings": {
-            "collection": "womens",
+            "collection": "womens-1",
             "subtext": ""
           },
           "blocks": {}
@@ -46,7 +46,7 @@
           "type": "featured-collection-card",
           "name": "t:blocks.featured_collection_card.name",
           "settings": {
-            "collection": "accessories",
+            "collection": "accessories-1",
             "subtext": ""
           },
           "blocks": {}
