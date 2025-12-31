@@ -73,5 +73,10 @@
     "headline": "Headline goes here",
     "subtitle": "Subtitle",
     "subtext": "Subtext goes here"
+  },
+  "contact": {
+    "stay_updated": "Stay Updated",
+    "subscribe": "Subscribe",
+    "subscribe_to_newsletter": "Subscribe to our newsletter for exclusive offers and style tips"
   }
 }
