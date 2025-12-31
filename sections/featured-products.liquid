@@ -1,0 +1,74 @@
+<div class="mx-auto w-full">
+  <div class="flex items-center justify-between mb-12">
+    <div>
+      <h2 class="text-4xl font-bold text-foreground mb-2">
+        {% if section.settings.headline != blank %}
+          {{ section.settings.headline }}
+        {% else %}
+          {{ 'general_content.title' | t }}
+        {% endif %}
+      </h2>
+      <p class="text-gray-600">
+        {% if section.settings.subtext != blank %}
+          {{ section.settings.subtext }}
+        {% else %}
+          {{ 'general_content.subtext' | t }}
+        {% endif %}
+      </p>
+    </div>
+    <a
+      href="{{ section.settings.cta_link }}"
+      class="text-foreground font-semibold flex items-center space-x-2 hover:text-accent transition"
+    >
+      <span>
+        {% if section.settings.cta_label != blank %}
+          {{ section.settings.cta_label }}
+        {% else %}
+          {{ 'cta.label' | t }}
+        {% endif %}
+      </span>
+      <i class="size-4">
+        {{ 'icon-arrow-right.svg' | inline_asset_content }}
+      </i>
+    </a>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    {% content_for 'blocks' %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:general.featured_products",
+  "tag": "section",
+  "class": "py-12 md:py-20 bg-gray-50",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "t:labels.headline",
+      "default": "New Arrivals"
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "t:labels.text_options.subtext",
+      "default": "Fresh styles just landed"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "t:labels.cta.label",
+      "default": "View All"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "t:labels.cta.link"
+    }
+  ],
+  "blocks": [{ "type": "product-card" }],
+  "max_blocks": 4,
+  "presets": [{ "name": "t:general.featured_products" }]
+}
+{% endschema %}

@@ -5,7 +5,10 @@
   {% content_for 'block', type: 'featured-collection-card', id: 'featured-collection-card-1' %}
 {% enddoc %}
 
-<a href="{{ block.settings.collection.url }}" class="relative group cursor-pointer overflow-hidden rounded-lg h-100">
+<a
+  href="{{ block.settings.collection.url }}"
+  class="relative group cursor-pointer overflow-hidden rounded-lg h-100 flex"
+>
   {% if block.settings.collection and block.settings.collection.image != blank %}
     {{
       block.settings.collection.image

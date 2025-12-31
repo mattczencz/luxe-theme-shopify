@@ -1,0 +1,16 @@
+{% doc %}
+  Renders the appropriate product pill according to it's status.
+
+  @param {boolean} [on_sale] - Displays the "sale" pill version
+  @param {boolean} [new] - Displays the "new" pill version
+
+  @example
+  {% render 'product-status-pill', on_sale: true %}
+  {% render 'product-status-pill', new: true %}
+{% enddoc %}
+
+{% if on_sale %}
+  <div class="absolute top-4 left-4 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full">SALE</div>
+{% elsif new %}
+  <div class="absolute top-4 left-4 bg-foreground text-white text-xs font-bold px-3 py-1 rounded-full">NEW</div>
+{% endif %}
