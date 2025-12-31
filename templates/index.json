@@ -184,6 +184,59 @@
         "headline": "Trending Now",
         "subtext": "Most popular items this week"
       }
+    },
+    "info_blocks_tfYQDC": {
+      "type": "info-blocks",
+      "blocks": {
+        "info_block_dH8dpL": {
+          "type": "info-block",
+          "name": "t:blocks.info_block.name",
+          "settings": {
+            "icon": "icon-truck.svg",
+            "title": "Free Shipping",
+            "subtext": "On orders over $100"
+          },
+          "blocks": {}
+        },
+        "info_block_bDTVRU": {
+          "type": "info-block",
+          "name": "t:blocks.info_block.name",
+          "settings": {
+            "icon": "icon-return.svg",
+            "title": "Easy Returns",
+            "subtext": "30-day return policy"
+          },
+          "blocks": {}
+        },
+        "info_block_ain7kB": {
+          "type": "info-block",
+          "name": "t:blocks.info_block.name",
+          "settings": {
+            "icon": "icon-shield.svg",
+            "title": "Secure Payment",
+            "subtext": "100% secure transactions"
+          },
+          "blocks": {}
+        },
+        "info_block_FhqXdP": {
+          "type": "info-block",
+          "name": "t:blocks.info_block.name",
+          "settings": {
+            "icon": "icon-headphones.svg",
+            "title": "24/7 Support",
+            "subtext": "Dedicated customer service"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "info_block_dH8dpL",
+        "info_block_bDTVRU",
+        "info_block_ain7kB",
+        "info_block_FhqXdP"
+      ],
+      "name": "t:general.info_blocks",
+      "settings": {}
     }
   },
   "order": [
@@ -191,6 +244,7 @@
     "featured_collections_KTRE7b",
     "featured_products_jBWhp9",
     "media_and_copy_fRNDfM",
-    "trending_ffFxgi"
+    "trending_ffFxgi",
+    "info_blocks_tfYQDC"
   ]
 }
