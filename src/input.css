@@ -90,6 +90,8 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
   }
+
+  [x-cloak] { display: none !important; }
 }
 
 @layer components {
